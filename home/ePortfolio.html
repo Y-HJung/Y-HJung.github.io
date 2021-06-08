@@ -4,20 +4,23 @@
     <style>
         *{box-sizing:border-box; padding:0; margin:0;}
         body {background-color:#fff2fb;}
-        .header, .nav{background-color:white; border:ridge 4px #ffd7f3; margin:1em; padding:1em; border-radius:0.5em;}
-        .section1 {background-color:#f7ecf4; border:ridge 3px #ffd7f3; margin:1em; padding:1em; border-radius:0.5em; }
-        .section2 {background-color:white; border:ridge 4px #ffd7f3; margin:0.7em; padding:1em; border-radius:0.5em;}
-        .aside {background-color:white; border:ridge 4px #ffd7f3; margin:1em; padding:1em; border-radius:0.5em; float:left;}
+        .header, .nav{background-color:white; border:ridge 4px rgb(243, 243, 243); margin:1em; padding:1em; border-radius:0.5em;}
+        .section1 {background-color:#f7ecf4; border:ridge 3px rgb(243, 243, 243); margin:1em; padding:1em; border-radius:0.5em; }
+        .section2 {background-color:white; border:ridge 4px rgb(243, 243, 243); margin:0.7em; padding:1em; border-radius:0.5em;}
+        .aside {background-color:white; border:ridge 4px rgb(243, 243, 243); margin:1em; padding:1em; border-radius:0.5em; float:left;}
         a:link {color: blue; background-color: transparent; text-decoration: none;}
         a:visited {color: purple; background-color: transparent; text-decoration: none;}
         a:hover {color: red; background-color: transparent; text-decoration: underline;}
         a:active {color: black; background-color: transparent; text-decoration: none;}
         header > img {padding-top:1em;}
-        button {border:ridge 2px #ffd7f3; background-color:#fff2fb;}
-        section > section > button > a {padding:2em; font-size:0.1875em;}
-        section > section > h2 {padding-bottom:1em;}
+        header > h1 {text-shadow:0.1em 0.1em 0.2em #C0C0C0; padding:0.2em;}
+        button {border:ridge 2px rgb(243, 243, 243); background-color:#fff2fb;}
+        nav > ul > button > a {font-size:17px; text-shadow:0.1em 0.1em 0.2em #C0C0C0; padding:1em;}
+        section > section > button > a {padding:2em; font-size:5px; text-shadow:0.1em 0.1em 0.2em #C0C0C0;}
+        section > section > h2 {padding-bottom:1em; text-shadow:0.1em 0.1em 0.2em #C0C0C0;}
         #se1 > ul > li, #se2 > ul > li {padding:0.3em;}
         #se2 > h3 {padding:0.2em;}
+        aside > h3 {text-shadow:0.1em 0.1em 0.2em #C0C0C0;}
         ul.list1 > li {display:inline;}
         ul.list2, ul.list3 {padding-left:1em;}
         ul.list2 > li, ul.list3 > li {list-style-type:square;}
@@ -46,7 +49,7 @@
     </header>
     <nav id="list" class="nav col-12 col-t-12">
         <ul class="list1">
-            <li><a href="#se1">자기소개</a> | </li><li><a href="#se2">수강 과목</a> | </li><li><a href="#se3">학기말 프로젝트 수행내역</a> | </li><li><a href="#se4">교내 비교과 활동</a> | </li><li><a href="#asi">과제 관리 사이트</a></li>
+            <button><a href="#se1">자기소개</a></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button><a href="#se2">수강 과목 및 성적</a></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button><a href="#se3">학기말 프로젝트 수행내역</a></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button><a href="#se4">교내 비교과 활동</a></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button><a href="#asi">과제 관리 사이트</a></button>
         </ul>
     </nav>
     <section class="section1 col-10 col-t-10">
@@ -63,7 +66,7 @@
             <button><a href="#main"># MAIN</a></button>
         </section>
         <section id="se2" class="section2"> 
-            <h2><mark>수강 과목</mark></h2>
+            <h2><mark>수강 과목 및 성적</mark></h2>
             <h3>1학년 1학기(2019)</h3>
             <ul class="list3">
                 <li>미래를여는나노기술</li>
