@@ -4,7 +4,7 @@
     <style>
         *{box-sizing:border-box; padding:0; margin:0;}
         body {background-color:#fff2fb;}
-        .header, .nav{background-color:white; border:ridge 4px rgb(243, 243, 243); margin:1em; padding:1em; border-radius:0.5em;}
+        .header, .nav, .footer{background-color:white; border:ridge 4px rgb(243, 243, 243); margin:1em; padding:1em; border-radius:0.5em;}
         .section1 {background-color:#f7ecf4; border:ridge 3px rgb(243, 243, 243); margin:1em; padding:1em; border-radius:0.5em; }
         .section2 {background-color:white; border:ridge 4px rgb(243, 243, 243); margin:0.7em; padding:1em; border-radius:0.5em;}
         .aside {background-color:white; border:ridge 4px rgb(243, 243, 243); margin:1em; padding:1em; border-radius:0.5em; float:left;}
@@ -29,13 +29,13 @@
         ul.img > li {list-style-type:none; padding:0.5em;}
         table, th, td {border:1px solid black; border-collapse:collapse;}
         table {margin:5px; float:left;}
-        .cl {clear:both;}
         .clear::after {content:""; clear:both; display:table;}
         th, td {text-align:center; padding:5px; vertical-align:bottom;}
         td.color {background-color:rgb(218, 241, 245);}
         tr:nth-child(even) {background-color:rgb(243, 242, 242);}
         th {background-color: rgb(196, 195, 195); color:white;}
         table.t {table-layout:auto;}
+        footer > p {font-size:11px; padding:0.5em; color:rgb(155, 153, 153);}
         /* for mobile */
         [class*="col-"] {width:100%;}
         @media only screen and (min-width:600px){  /* For tablets */
@@ -141,7 +141,7 @@
                 <tr><td>전공필수(복수)</td><td>디지털논리회로</td><td>X</td></tr>
                 <tr><td>전공필수(복수)</td><td>자료구조및실습</td><td>X</td></tr>
             </table>
-            <button class="cl"><a href="#main"># MAIN</a></button>
+            <button><a href="#main"># MAIN</a></button>
         </section>
         <section id="se3" class="section2">
             <h2><mark>학기말 프로젝트 수행내역</mark></h2>
@@ -248,5 +248,10 @@
         <p>사진을 누르면 과제 관리 사이트로 이동합니다.</p>
         <button><a href="#main"># MAIN</a></button>
     </aside>
+    <footer class="footer col-12 col-t-12">
+        <p>2021년 1학기 인터넷응용 포트폴리오 과제</p>
+        <hr/>
+        <p>이메일 : hyejung0107_@naver.com</p>
+    </footer>
 </body>
 </html>
