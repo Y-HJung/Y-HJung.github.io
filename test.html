@@ -27,21 +27,21 @@
 
         function operation(x, y, op) {
             if((x !== null) && (y !== null) && (op !== null)){
-                if(op === "더하기") {
+                if((op === "더하기") || (op === "+")) {
                     return x + y;
-                } else if (op === "빼기"){
+                } else if ((op === "빼기") || (op === "-")) {
                     if(x >= y){
                         return x - y;
                     } else {
                         return y - x;
                     }
-                } else if (op === "나누기") {
+                } else if ((op === "나누기") || (op === "/")) {
                     if(x >= y) {
                         return x / y;
                     } else {
                         return y / x;
                     }
-                } else if (op === "곱하기") {
+                } else if ((op === "곱하기") || (op === "*")) {
                     return x * y;
                 }
             }
