@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>형을 위한 임시 사이트야</title>
+    <link rel="stylesheet" href="haha.css">
+</head>
+<body>
+    <div id="first">
+        <h1>형 같이 자바스크립트 하자!!</h1>
+
+        <button class="button" id="open">눌러보시오.</button>
+    </div>
+
+    <script>
+        var number1, number2, oper, result;
+        document.querySelector('#open').onclick = prom;
+
+        function prom(){
+            number1 = parseInt(prompt("숫자를 입력하세요."));
+            number2 = parseInt(prompt("숫자를 입력하세요."));
+            oper = prompt("사칙연산 중 하고싶은 것 하나를 고르시오.", "더하기 or 빼기 or 나누기 or 곱하기");
+            result = operation(number1, number2, oper);
+            document.write(number1 + " " + oper + " " + number2 + " = " + result);
+        }
+
+        function operation(x, y, op) {
+            if((x !== null) && (y !== null) && (op !== null)){
+                if(op === "더하기") {
+                    return x + y;
+                } else if (op === "빼기"){
+                    if(x >= y){
+                        return x - y;
+                    } else {
+                        return y - x;
+                    }
+                } else if (op === "나누기") {
+                    if(x >= y) {
+                        return x / y;
+                    } else {
+                        return y / x;
+                    }
+                } else if (op === "곱하기") {
+                    return x * y;
+                }
+            }
+        }
+    </script>
+    
+</body>
+</html>
