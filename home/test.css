@@ -1,9 +1,14 @@
 :root {
   --border-color : #eee;
-  --text-color: #424242;
+  --text-color: #333;
   --radio_checked-color: #bdbdbd;
   --lightPurple-color : #f3e5f5;
   --purple-color: #e1bee7;
+  --red-color: #ef5350;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 html {
@@ -16,7 +21,6 @@ body {
   margin: 0;
   width: 100%;
   height: 100%;
-  box-sizing: border-box;
   font-family: 'Nanum Gothic', sans-serif;
   font-size: 14px;
   overflow-x: hidden;
@@ -34,6 +38,8 @@ a {
 
 .main {
   display: flex;
+  width: 100%;
+  height: 100%;
 }
 
 /* 네비게이션 */
@@ -49,7 +55,7 @@ a {
   border-right: 1px solid var(--border-color);
 }
 
-.main nav a:hover {
+.main nav li:hover a {
   color: var(--purple-color);
 }
 
@@ -73,18 +79,20 @@ a {
 
 .main nav .radio {
   width: 200px;
-  height: 40px;
-  line-height: 40px;
   border-top: 1px solid var(--border-color);
-  border-bottom: 1px solid var(--border-color);
 }
 
 .main nav .radio label {
   display: inline-block;
   cursor: pointer;
+  width: 98px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
   margin: 0;
-  padding: 0 25.5px;
+  padding: 0 20px;
   color: var(--radio_checked-color);
+  border-bottom: 1px solid var(--border-color);
 }
 
 .main nav .radio input {
@@ -108,7 +116,15 @@ a {
 
 .main nav .radio ul li {
   padding-left: 30px;
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
 }
+
+.main nav .radio ul li:hover {
+  background: rgba(241, 241, 241, 0.952);
+}
+
 
 .main nav #tab1:checked ~ .category,
 .main nav #tab2:checked ~ .board {
@@ -121,7 +137,8 @@ a {
   flex-direction: column;
   width: 100%;
   height: 100%;
-  margin-left: 205px;
+  margin-left: 210px;
+  margin-right: 100px;
 }
 
 .main .main_contents header {
@@ -145,6 +162,81 @@ a {
   height: 100%;
 }
 
+/* new, best 배치 */
+.main .main_contents .section section {
+  display: flex;
+  flex-direction: column;
+}
+
+.main .main_contents .section .new,
+.main .main_contents .section .best {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.main .main_contents .section .new .new_logo,
+.main .main_contents .section .best .best_logo {
+  width: 100%;
+  height: 40px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.main .main_contents .section .new .new_logo span,
+.main .main_contents .section .best .best_logo span {
+  /* color: var(--red-color); */
+  /* color: #b39ddb; */
+  /* color: #9575cd; */
+  color: #ce93d8;
+  font-family: 'Gugi', cursive;
+  font-size: 30px;
+}
+
+.main .main_contents .section .new .new_preview,
+.main .main_contents .section .best .best_preview {
+  display: flex;
+  margin-bottom: 20px; /* 임시 */
+  /* flex-wrap: wrap; */
+}
+
+.main .main_contents .section .new .new_preview .new_contents,
+.main .main_contents .section .best .best_preview .best_contents {
+  width: 200px;
+  height: 300px;
+  margin: 20px 1%;
+}
+
+.main .main_contents .section .new .new_preview .new_contents .img,
+.main .main_contents .section .best .best_preview .best_contents .img {
+  position: relative;
+  width: 200px;
+  height: 250px;
+  border: 1px solid var(--border-color);
+  background: var(--lightPurple-color);
+  overflow: hidden;
+}
+
+.main .main_contents .section .new .new_preview .new_contents .img img,
+.main .main_contents .section .best .best_preview .best_contents .img img {
+  position: absolute;
+  top: 250px;
+  opacity: 0;
+  transition: top, opacity .7s, .7s ease;
+}
+
+.main .main_contents .section .new .new_preview .new_contents .img:hover img,
+.main .main_contents .section .best .best_preview .best_contents .img:hover img {
+  top:0;
+  opacity: 0.7;
+  transition: all .7s ease;
+}
+
+.main .main_contents .section .new .new_preview span,
+.main .main_contents .section .best .best_preview span {
+  display: inline-block;
+  width: 200px;
+}
+
 /* 사이드바 */
 .sideBar {
   position: fixed;
@@ -157,6 +249,7 @@ a {
 
 .sideBar .button {
   position: fixed;
+  top: 70px;
   right: 0;
   cursor: pointer;
   width: 40px;
@@ -164,8 +257,7 @@ a {
   font-size: 20px;
   text-align: center;
   line-height: 45px;
-  background: var(--purple-color);
-  color: white;
+  background: #fff;
   border-top: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
   border-left: 1px solid var(--border-color);
@@ -176,7 +268,7 @@ a {
   right: 200px;
   transform: rotate(180deg);
   border-right: 1px solid var(--border-color);
-  background: white;
+  background: #fff;
   color: var(--text-color);
   transition: right .4s ease-out;
 }
@@ -222,7 +314,7 @@ a {
 }
 
 .sideBar .info .login a:hover {
-  color: red;
+  color: var(--red-color);
 }
 
 /* .sideBar .info .login .singIn {
@@ -289,5 +381,12 @@ a {
 
 footer {
   width: 100%;
-  margin-left: 205px;
+  height: 30px;
+  /* border-top: 1px solid var(--border-color); */
+}
+
+footer .footer_contents {
+  display: flex;
+  width: 100%;
+  border-top: 1px solid var(--border-color);
 }
