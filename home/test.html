@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="test.css">
+  <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Praise&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
   <title>쇼핑몰</title>
   <script src="https://kit.fontawesome.com/1b5a5bad3c.js" crossorigin="anonymous"></script>
-  <script defer src="test.js"></script>
+  <script defer src="js/site.js"></script>
 </head>
 <body>
   <div class="main">
@@ -19,9 +20,9 @@
       </div>
       <div class="radio">
         <input type="radio" id="tab1" name="tab" checked>
-        <label for="tab1">카테고리</label>
+        <label for="tab1" class="tabMenu">카테고리</label>
         <input type="radio" id="tab2" name="tab">
-        <label for="tab2"> 게시판</label>
+        <label for="tab2" class="tabMenu"> 게시판</label>
         <div class="category">
           <ul>
             <li><a href="#">상의</a></li>
@@ -43,7 +44,7 @@
     </nav>
     <div class="main_contents">
       <header>
-        <div class="main_logo"><a href="test.html">HyeJung</a></div>
+        <div class="main_logo"><a href="index.html">HyeJung</a></div>
       </header>
       <div class="section">
         <section>
@@ -54,27 +55,39 @@
             </div>
             <div class="new_preview">
               <div class="new_contents">
-                <div class="img"><a href="#"></a></div>
+                <div class="img">
+                  <a href="#"><img src="image/jsh.jpg" width="200px"></a>
+                </div>
                 <span><a href="#">신상템1</a></span>
               </div>
               <div class="new_contents">
-                <div class="img"><a href="#"></a></div>
+                <div class="img">
+                  <a href="#"><img src="image/jsh.jpg" width="200px"></a>
+                </div>
                 <span><a href="#">신상템2</a></span>
               </div>
               <div class="new_contents">
-                <div class="img"><a href="#"></a></div>
+                <div class="img">
+                  <a href="#"><img src="image/jsh.jpg" width="200px"></a>
+                </div>
                 <span><a href="#">신상템3</a></span>
               </div>
               <div class="new_contents">
-                <div class="img"><a href="#"></a></div>
+                <div class="img">
+                  <a href="#"><img src="image/jsh.jpg" width="200px"></a>
+                </div>
                 <span><a href="#">신상템4</a></span>
               </div>
               <div class="new_contents">
-                <div class="img"><a href="#"></a></div>
+                <div class="img">
+                  <a href="#"><img src="image/jsh.jpg" width="200px"></a>
+                </div>
                 <span><a href="#">신상템5</a></span>
               </div>
               <div class="new_contents">
-                <div class="img"><a href="#"></a></div>
+                <div class="img">
+                  <a href="#"><img src="image/jsh.jpg" width="200px"></a>
+                </div>
                 <span><a href="#">신상템6</a></span>
               </div>
             </div>
@@ -86,33 +99,52 @@
             </div>
             <div class="best_preview">
               <div class="best_contents">
-                <div class="img"><a href="#"></a></div>
+                <div class="img">
+                  <a href="#"><img src="image/jsh.jpg" width="200px"></a>
+                </div>
                 <span><a href="#">베스트 아이템1</a></span>
               </div>
               <div class="best_contents">
-                <div class="img"><a href="#"></a></div>
+                <div class="img">
+                  <a href="#"><img src="image/jsh.jpg" width="200px"></a>
+                </div>
                 <span><a href="#">베스트 아이템2</a></span>
               </div>
               <div class="best_contents">
-                <div class="img"><a href="#"></a></div>
+                <div class="img">
+                  <a href="#"><img src="image/jsh.jpg" width="200px"></a>
+                </div>
                 <span><a href="#">베스트 아이템3</a></span>
               </div>
               <div class="best_contents">
-                <div class="img"><a href="#"></a></div>
+                <div class="img">
+                  <a href="#"><img src="image/jsh.jpg" width="200px"></a>
+                </div>
                 <span><a href="#">베스트 아이템4</a></span>
               </div>
               <div class="best_contents">
-                <div class="img"><a href="#"></a></div>
+                <div class="img">
+                  <a href="#"><img src="image/jsh.jpg" width="200px"></a>
+                </div>
                 <span><a href="#">베스트 아이템5</a></span>
               </div>
               <div class="best_contents">
-                <div class="img"><a href="#"></a></div>
+                <div class="img">
+                  <a href="#"><img src="image/jsh.jpg" width="200px"></a>
+                </div>
                 <span><a href="#">베스트 아이템6</a></span>
               </div>
             </div>
           </div>
         </section>
       </div>
+      <footer>
+        <div class="footer_contents">
+          <span>양혜정</span>
+          <span>abcd1234@naver.com</span>
+          <span>010-1234-5678</span>
+        </div>
+      </footer>
     </div>
   </div>
   <div class="sideBar">
@@ -140,10 +172,12 @@
       </div>
     </div>
   </div>
-  <footer>
-    <span>양혜정</span>
-    <span>abcd1234@naver.com</span>
-    <span>010-1234-5678</span>
-  </footer>
+  <!-- <footer>
+    <div class="footer_contents">
+      <span>양혜정</span>
+      <span>abcd1234@naver.com</span>
+      <span>010-1234-5678</span>
+    </div>
+  </footer> -->
 </body>
 </html>
