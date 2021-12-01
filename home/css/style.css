@@ -282,6 +282,7 @@ a {
   border-bottom: 1px solid var(--border-color);
   border-left: 1px solid var(--border-color);
   transition: right .4s ease-out;
+  z-index: 20;
 }
 
 .sideBar .button.active {
