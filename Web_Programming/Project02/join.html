@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/join.css">
+  <link href="https://fonts.googleapis.com/css2?family=Praise&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+  <title>회원가입</title>
+  <script src="https://kit.fontawesome.com/1b5a5bad3c.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+  $(function(){
+		$('#id_input').blur(function(){
+			$.ajax({
+				type:"POST",
+				url:"./jsp/checkId.jsp",
+				data:{
+					"id":$('#id_input').val()
+				},
+				success:function(data){
+					if($.trim(data)=="YES"){
+						$('#checkId').html('<b stlye="font-size:14px; color:blue">사용 가능한 아이디입니다</b>');
+						$('#joinBtn').attr('disabled',false);
+					} else{
+						$('#checkId').html('<b style="font-size:14px; color:red">이미 등록되어있는 아이디입니다</b>');
+						$('#joinBtn').attr('disabled',true);
+					}
+				}
+			});
+		});
+	});
+  </script>
+  <script defer src="js/join.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <span><a href="index.html">HyeJung</a></span>
+      </div>
+    </header>
+    <div class="join">
+      <form action="jsp/join.jsp" method="post">
+        <div class="join_idpw">
+          <div class="id">
+            <span class="text">아이디</span>
+            <input id="id_input" type="text" name="id">
+            <span id="checkId"></span>
+          </div>
+          <span class="error">필수 정보입니다.</span>
+          <div class="pw">
+            <span class="text">비밀번호</span>
+            <input id="pw_input" type="password" name="passwd">
+            <!-- <i class="far fa-eye"></i> -->
+            <i class="far fa-eye-slash"></i>
+          </div>
+          <span class="error">필수 정보입니다.</span>
+          <div class="pw_check">
+            <span class="text">비밀번호 확인</span>
+            <input id="pwCheck_input" type="password">
+             <!-- <i class="far fa-eye"></i> --> 
+            <i class="far fa-eye-slash"></i>
+          </div>
+          <span class="error">필수 정보입니다.</span>
+          <span class="pw_error">비밀번호가 일치하지 않습니다.</span>
+        </div>
+        <div class="join_info">
+          <div class="name">
+            <span class="text">이름</span>
+            <input type="text" id="name_input" name="name">
+          </div>
+          <span class="error">필수 정보입니다.</span>
+          <div class="gender">
+            <span class="text">성별</span>
+            <select name="gender" id="gender_sel">
+              <option value selected>성별</option>
+              <option value="M">남자</option>
+              <option value="F">여자</option>
+            </select>
+            <div class="dropBtn">
+              <i class="fas fa-caret-down"></i>
+            </div>
+          </div>
+          <span class="error">필수 정보입니다.</span>
+          <div class="mobile">
+            <span class="text">휴대전화</span>
+            <input type="tel" id="tel_input" name="tel">
+          </div>
+          <span class="error">필수 정보입니다.</span>
+        </div>
+        <div class="join_btn">
+          <button id="joinBtn" type="button" class="btn">
+            <span class="btn_text">가입하기</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
